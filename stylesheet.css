@@ -1,0 +1,10 @@
+.show { 
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 3rem ;
+    margin-top: 50px;
+    margin-left: 100px;
+}
+.searchList{
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 3rem ;
+    margin-top: 50px;
+    margin-left: 100px;
+}
