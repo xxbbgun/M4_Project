@@ -23,12 +23,12 @@ function show_content(element) {
     div_show.appendChild(img);
     div_show.appendChild(title);
     div_show.appendChild(synopsis); 
-   /* div_show.addEventListener('dbclick',(event) => {
+    div_show.addEventListener('dblclick',(event) => {
     let confirmAdd = confirm(`คุณต้องการเพิ่ม ${element.title} เป็นหนังที่ชื่นชอบหรือไม่`)
     if (confirmAdd){
          addFavoriteToDB(element)
     }
-})*/
+})
     show.appendChild(div_show);
    
 }
@@ -68,16 +68,17 @@ function searchResultList(searchResultList){
     }
 }
 
-/*function addFavoriteToDB(element){
+function addFavoriteToDB(element){
     
     var favoriteID = 1
-    let Favorite = `{"url":"${element},"image_url":"${element.image_url}","title":"${element.title}","synopis":"${element.synopsis}"}`
+    let Favorite = `{"url":"${element.url},"image_url":"${element.image_url}","title":"${element.title}","synopsis" :"${element.synopsis}",
+    "type":"${element.type}","episodes":"${element.episodes}","score":"${element.score}","rated":"${element.rated}","id":"${id}"}`
     fetch('https://se104-project-backend.du.r.appspot.com/movies',{
         method:'POST',
         headers:{
             'Content-Type':'application/json'
         },
-        Favorite:`{"favoriteID":"632110334","movie":${Favorite}}`
+        body:`{"id":"632110334","movie":${Favorite}}`
     }) .then(response=>{
         if(response.status == 200){
             return response.json()
@@ -91,5 +92,5 @@ function searchResultList(searchResultList){
         alert('Add favorite Error')
     })
 }
-*/
+
 
