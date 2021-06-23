@@ -8,3 +8,47 @@
     margin-top: 50px;
     margin-left: 100px;
 }
+.favoriteMenu{
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 3rem ;
+    margin-top: 50px;
+    margin-left: 100px;
+}
+.navbar-brand{
+    color:#d2aa5a;
+}
+.nav-item{
+    color: white;
+}
+.nav-item:hover{
+    color: 	#d2aa5a;
+}
+.btn{
+    color: white ;
+    background-color: #d2aa5a;
+}
+a{
+    text-decoration: none;
+    color: 	#d2aa5a;
+}
+a:hover{
+    color: white;
+}
+.fab{
+    color: 	#d2aa5a;
+    font-size: 25px;
+    padding: 10px;
+}
+.btn-1{
+    color: white ;
+    background-color: #d2aa5a;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+.dropdown-item:hover{
+    color: white ;
+    background-color: #d2aa5a;
+}
+.btn-danger{
+    color: white;
+    background-color:#dc3545;
+}
