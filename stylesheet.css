@@ -16,6 +16,7 @@
 }
 .navbar-brand{
     color:#d2aa5a;
+    font-weight: 500;
 }
 .nav-item{
     color: white;
@@ -78,4 +79,11 @@ a:hover{
 }
 hr.style1{
 	border-top: 3px solid #8c8b8b;
+}
+.credit{
+    font-size: small;
+    color: white;
+}
+.profile{
+    margin-right: 15px;
 }
