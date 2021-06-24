@@ -187,7 +187,7 @@ function showdetail(element){
     synopsis.innerHTML = `Synopsis : ${element.synopsis}`
     type.innerHTML = `Type : ${element.type}`
     score.innerHTML = `Score : ${element.score}`
-    rated.innerHTML = `Rated: ${element.rated}`
+    rated.innerHTML = `Rated : ${element.rated}`
     div_show.appendChild(img);
     div_show.appendChild(title);
     div_show.appendChild(synopsis);

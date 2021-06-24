@@ -1,7 +1,7 @@
 .show { 
     display: grid; 
-    grid-template-columns: repeat(4, 1fr); gap: 3rem ;
-    margin-top: 50px;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 3rem ;
     margin-left: 100px;
 }
 .searchList{
@@ -40,7 +40,6 @@ a:hover{
 }
 .fab{
     color: 	#d2aa5a;
-    font-size: 25px;
     padding: 10px;
 }
 .btn-1{
@@ -62,4 +61,21 @@ a:hover{
     color: white;
     background-color: #0d6efd;
    
+}
+.tab{
+   font-weight: 500;
+    font-size: 25px;
+    padding: 30px;
+}
+
+.nav-link-tab{
+    color:  grey;
+    padding-left: 12px;
+}
+
+.nav-link-tab:hover{
+    color: #d2aa5a;
+}
+hr.style1{
+	border-top: 3px solid #8c8b8b;
 }
