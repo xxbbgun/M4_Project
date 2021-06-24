@@ -116,13 +116,16 @@ function show_content_favorite(element) {
     const title = document.createElement('h6');
     img.src = element.image_url;
     title.innerHTML = `Name : ${element.title}`;
-   /* let detail = document.createElement('button')
-    detail.classList.add("btn","btn-primary")
-    datail.innerHTML ="Details"
-    datail.addEventListener('click',()=>{
+     
+    let detail = document.createElement('button')
+    detail.classList.add('btn')
+    detail.classList.add('btn-primary')
+    detail.setAttribute('type','button')
+    detail.innerHTML ="Details"
+    detail.addEventListener('click',()=>{
         getdetail(element.id)
     })
-    buttons.appendChild(detail)*/
+
     let deletes = document.createElement('button')
     deletes.classList.add('btn')
 	deletes.classList.add('btn-danger')
@@ -137,7 +140,9 @@ function show_content_favorite(element) {
    
     div_show.appendChild(img);
     div_show.appendChild(title); 
+    div_show.appendChild(detail);
     div_show.appendChild(deletes);
+   
     show.appendChild(div_show);
    
 }
@@ -158,8 +163,18 @@ function  delete_movie(id){
 		console.error(error) 
 	})
 }
+//เรียกรายละเอียดจากdb
+function getdetail(id){
+    fetch(`https://se104-project-backend.du.r.appspot.com/movie/632110334/${id}`)
+    .then((response) =>{
+        return response.json()
+    }).then((data) => {
+        show.innerHTML = ""
+       showdetail(data)
+            })
+}
 //รายละเอียดหนังที่ชอบ
-/*function getdetail(id){
+function showdetail(element){
     const div_show = document.createElement('div');
     const img = document.createElement('img');
     const title = document.createElement('h5');
@@ -168,11 +183,11 @@ function  delete_movie(id){
     const score = document.createElement('p');
     const rated = document.createElement('p');
     img.src = element.image_url;
-    title.innerHTML = element.title;
-    synopsis.innerHTML = element.synopsis;
-    type.innerHTML = element.type;
-    score.innerHTML = element.score;
-    rated.innerHTML = element.rated;
+    title.innerHTML = `Name : ${element.title}`
+    synopsis.innerHTML = `Synopsis : ${element.synopsis}`
+    type.innerHTML = `Type : ${element.type}`
+    score.innerHTML = `Score : ${element.score}`
+    rated.innerHTML = `Rated: ${element.rated}`
     div_show.appendChild(img);
     div_show.appendChild(title);
     div_show.appendChild(synopsis);
@@ -180,4 +195,4 @@ function  delete_movie(id){
     div_show.appendChild(score);
     div_show.appendChild(rated);
     show.appendChild(div_show);
-}*/
+}
